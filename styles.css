@@ -7,41 +7,33 @@
     src: url(./fonts/Fraunces_9pt-Regular.ttf) format(truetype);
 }
 
-section{
-    width:100%;
-    height:75vw;
-    position: relative;
+body{
+    background-color: hsl(30, 38%, 92%);
 }
-    
 
-.background{
-    background-color:hsl(30, 38%, 92%);
-    width:100%;
-    height:100%;
-    position: absolute;
-    left:0;
-    z-index: 2;
-    filter: drop-shadow(0 0 0.5rem grey);
-    border-radius: 1.5rem;
-
+li{
+    list-style: none;
 }
 .content{
     display: flex;
     position:absolute;
-    z-index: 3;
     left:15%;
-    height:60%;
+    height:60vw;
     width:70%;
     flex-direction: row;
     top:20%;
 
 }
+
 .product{
     position: absolute;
     width:50%;
     height:100%;
     border-radius: 10% 0 0 10%;
     
+}
+.mobile{
+    display:none;
 }
 .info{
     display:flex;
@@ -61,13 +53,20 @@ section{
     font-weight: 700;
     background-color:darkcyan;
     cursor: pointer;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     width:80%;
    top:80%;     
    font-size:1.5vw;
    left:10%;
-
-
+   height:5vw;
+   color: white;
+}
+.cart{
+    height:3vw;
+    width:3vw;
+    position: absolute;
+    left:5vw;
+    top:1vw;
 }
 .btn:hover{
     background-color: hsl(158, 36%, 37%);
@@ -99,12 +98,12 @@ p{
     position:absolute; 
     left :10%;
     font-family: 'montserrat', sans-serif;
-    font-size: 1.5vw;
+    font-size: 1.75vw;
     font-weight: 500 700;
     text-align: left;
     overflow-wrap: break-word;
     width:75%;
-    top:40%;
+    top:35%;
 
 }
 .discount{
@@ -132,15 +131,78 @@ p{
     top: 65%;
 }
 
-.cart{
-    position:relative;
+@media screen and (max-width:375px)  {
+    
 
-}
-
-svg{
-    position: absolute;
-        width:1.5vw;
-        height:1.5vw;
-        left: 4vw;
+    
+    @font-face {
+        font-family: 'montserrat';
+        src: url(./fonts/Montserrat-Regular.ttf) format(truetype);
+    }
+    @font-face {
+        font-family: 'fraunces';
+        src: url(./fonts/Fraunces_9pt-Regular.ttf) format(truetype);
+    }
+    
+    body{
+        background-color: hsl(30, 38%, 92%);
+        height: 130vw;
+    }
+    
+    
+    .content{
+        position: absolute;
+        display:block ;
+       width:80vw;
+       height:120vw;
+       flex-direction: row;
+      flex-wrap: wrap; 
+      top:10vw;
+      left:10vw;
        
- }
+    }
+    .product{
+    display:none;
+    
+    }
+    .photo{
+        width: 80vw;
+       height: 60vw;
+    }
+    .mobile{
+        display: block;
+        width: 80vw;
+       height: 60vw;
+        
+    }
+    .info{
+       width: 80vw;
+       height: 60vw;
+       left: 0;
+       border-radius: 0 0 10% 10% ;
+    }
+    h3{
+        font-size:2.5vw;
+
+    }
+    h1{
+        font-size:5vw;
+    }
+    p{
+        font-size: 3vw;
+    }
+    .discount{
+        font-size: 2.5vw;
+        width: fit-content;
+    }
+    .pricing{
+        font-size: 4vw;
+    }
+    .btn{
+        height:6vw;
+        font-size: 3vw;
+    }
+    .cart{
+        left:10vw;
+    }
+}
